@@ -155,7 +155,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 19644643}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 199.699997}
   m_LocalScale: {x: 5, y: 10, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -191,9 +191,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myTransform: {fileID: 0}
-  maxSpeed: 10
-  minSpeed: 1
-  speed: 5
+  p_speed: 5
+  p_movement: {x: 0, y: 0}
   score: 0
 --- !u!23 &396209524
 MeshRenderer:
@@ -728,6 +727,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 878ee51efdd5dec4e9465ef306ab2916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  p_player: {fileID: 396209522}
+  p_maxBuildings: 10
 --- !u!1 &1602695020
 GameObject:
   m_ObjectHideFlags: 0
@@ -878,7 +879,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1734123716}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -100, y: 0, z: 1468}
+  m_LocalPosition: {x: -100, y: 0, z: 516}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -894,6 +895,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c32a972f44628624f84671ce9d457ecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  p_player: {fileID: 396209522}
+  p_maxBuildings: 10
 --- !u!1 &1939726162
 GameObject:
   m_ObjectHideFlags: 0
@@ -1048,7 +1051,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2021699383}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.2000008, y: 26.6000004, z: 57.5999985}
+  m_LocalPosition: {x: 0, y: 0, z: 95.3000031}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
