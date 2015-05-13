@@ -8,57 +8,55 @@ public class Player : MonoBehaviour
 	public Transform myTransform;
 
     //Speed Data
-    public float maxSpeed = 10;
-    public float minSpeed = 1;
-    public float speed = 5;
-    float moveSpeed = 15;
+    float maxSpeed = 10;
+    float minSpeed = 1;
+    public float p_speed = 5;
+    public Vector2 p_movement;
+    int dirLR = 0;
 
     //Score Data
     public float score = 0;
+    int scoreMultiplier = 1;
 
     void Start()
     {
+        p_movement = new Vector2((float)dirLR, p_speed);
         myTransform = transform;
-    }
-
-    void FixedUpdate()
-    {
-        //detecting input for moving the player left and right
-        if (Input.GetKey(KeyCode.A))
-        {
-            this.transform.position = new Vector3(this.transform.position.x - moveSpeed * Time.deltaTime, this.transform.position.y, this.transform.position.z);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            this.transform.position = new Vector3(this.transform.position.x + moveSpeed * Time.deltaTime, this.transform.position.y, this.transform.position.z);
-        }
     }
 
 	void Update ()
 	{
         //ensuring speed stays within its range
-        if(speed > maxSpeed)
+        if (p_speed > maxSpeed)
         {
-            speed = maxSpeed;
+            p_speed = maxSpeed;
         }
-        if (speed < minSpeed)
+        if (p_speed < minSpeed)
         {
-            speed = minSpeed;
+            p_speed = minSpeed;
+        }
+
+        //detecting input for moving the player left and right
+        if (Input.GetKey(KeyCode.A))
+        {
+            dirLR = -1;
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            dirLR = 1;
         }
 
         //detecting input for adjusting the speed value
         if (Input.GetKey(KeyCode.W))
         {
-            speed += Time.deltaTime;
+            p_speed += Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.S))
         {
-            speed -= Time.deltaTime;
+            p_speed -= Time.deltaTime;
         }
 		
         //increasing the score
-        score++;
-
-        Debug.Log(score.ToString());
+        score += 1 * scoreMultiplier;
 	}
 }
