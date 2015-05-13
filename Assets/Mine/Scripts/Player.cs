@@ -3,60 +3,55 @@ using System.Collections;
 
 public class Player : MonoBehaviour 
 {
-
-    //Transform Data
-	public Transform myTransform;
-
     //Speed Data
-    float maxSpeed = 10;
-    float minSpeed = 1;
+    float m_maxSpeed = 80;
+    float m_minSpeed = 20;
     public float p_speed = 5;
     public Vector2 p_movement;
-    int dirLR = 0;
+    int m_dirLR = 0;
 
     //Score Data
-    public float score = 0;
+    public float p_score = 0;
     int scoreMultiplier = 1;
 
     void Start()
     {
-        p_movement = new Vector2((float)dirLR, p_speed);
-        myTransform = transform;
+        p_movement = new Vector2((float)m_dirLR, p_speed);
     }
 
 	void Update ()
 	{
         //ensuring speed stays within its range
-        if (p_speed > maxSpeed)
+        if (p_speed > m_maxSpeed)
         {
-            p_speed = maxSpeed;
+            p_speed = m_maxSpeed;
         }
-        if (p_speed < minSpeed)
+        if (p_speed < m_minSpeed)
         {
-            p_speed = minSpeed;
+            p_speed = m_minSpeed;
         }
 
         //detecting input for moving the player left and right
         if (Input.GetKey(KeyCode.A))
         {
-            dirLR = -1;
+            m_dirLR = -1;
         }
         if (Input.GetKey(KeyCode.D))
         {
-            dirLR = 1;
+            m_dirLR = 1;
         }
 
         //detecting input for adjusting the speed value
         if (Input.GetKey(KeyCode.W))
         {
-            p_speed += Time.deltaTime;
+            p_speed += 0.345f;
         }
         if (Input.GetKey(KeyCode.S))
         {
-            p_speed -= Time.deltaTime;
+            p_speed -= 0.354f;
         }
 		
         //increasing the score
-        score += 1 * scoreMultiplier;
+        p_score += 1 * scoreMultiplier;
 	}
 }
