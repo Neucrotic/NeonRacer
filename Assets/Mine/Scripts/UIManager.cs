@@ -33,6 +33,6 @@ public class UIManager : MonoBehaviour
 	void Update () 
     {
         scoreText.text = "Score:" + player.score;
-        speedText.text = player.speed + "Kms/h";
+        speedText.text = player.p_speed + "Kms/h";
 	}
 }
