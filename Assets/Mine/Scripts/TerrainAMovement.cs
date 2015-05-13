@@ -1,37 +1,62 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class TerrainAMovement : MonoBehaviour {
 
-    public GameObject p_player;
-    private bool m_moveTerrainB = true;
-    private float m_speed = 70;
 
-	// Use this for initialization
+    // Use this for initialization
+    public GameObject p_player;
+    public int p_maxBuildings;
+
+    private GameObject m_building;
+    private bool m_moveTerrainB = true; //is so that this script only moves terrain b once
+    private float m_speed = 70;
+    private float m_terrainLength = 500f;
+
 	void Start () 
     {
-	
+        m_building = GameObject.FindGameObjectWithTag("Building");
 	}
 	
 	// Update is called once per frame
 	void Update () 
     {
-        int terrainLength = 500;
-
-        m_speed = p_player.GetComponent<Player>().p_movement.y;
+        m_speed = p_player.GetComponent<Player>().p_movement.y * 20;
 
         //Move this terrain towards the player.
         this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z - m_speed * Time.deltaTime);
 
-        //this move the other terrain to the back of this one
-        if (this.transform.position.z <= -250 && m_moveTerrainB)
+        //this moves the other terrain to the back of this one
+        if (this.transform.position.z <= 0 && m_moveTerrainB)
         {
             GameObject b = GameObject.FindGameObjectWithTag("TerrainB");
-            b.transform.position = new Vector3(b.transform.position.x, b.transform.position.y, this.transform.position.z + terrainLength);
+            b.transform.position = new Vector3(b.transform.position.x, b.transform.position.y, this.transform.position.z + m_terrainLength);
             b.GetComponent<TerrainBMovement>().SetCanMoveTerrainA(true);
+            b.GetComponent<TerrainBMovement>().GenBuildings();//When pushing terrain b to the back, call its gen function
             m_moveTerrainB = false;
         }
 	}
 
     public void SetCanMoveTerrainB(bool _bool) { m_moveTerrainB = _bool; }
+
+    public void GenBuildings()
+    {
+        //destroying prev building to stop repeating
+        var children = new List<GameObject>();
+        foreach (Transform child in this.transform)
+            Destroy(child.gameObject);
+
+        for (int i = 0; i < p_maxBuildings; i++)
+        {
+            int x = Random.Range(-100, 100); //Width
+            int z = Random.Range((int)(m_terrainLength), (int)((m_terrainLength * 2)));
+
+            Vector3 pos = new Vector3(x, 0, z);
+
+            GameObject clone;
+            clone = Instantiate(m_building, pos, transform.rotation) as GameObject;
+            clone.transform.parent = this.transform;
+        }
+    }
 }
