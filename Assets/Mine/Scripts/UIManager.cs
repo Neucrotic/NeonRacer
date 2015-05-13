@@ -32,7 +32,7 @@ public class UIManager : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
     {
-        scoreText.text = "Score:" + player.score;
+        scoreText.text = "Score:" + player.p_score;
         speedText.text = player.p_speed + "Kms/h";
 	}
 }
