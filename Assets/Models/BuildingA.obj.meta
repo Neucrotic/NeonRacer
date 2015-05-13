@@ -1,17 +1,17 @@
 fileFormatVersion: 2
-guid: 0626bcf7ab6194142a943fac5f035e6f
-timeCreated: 1431476120
+guid: 3836703db3165cd4e980803795ddf8a8
+timeCreated: 1431484210
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: BuildingA:BuildingA:polySurface1
-    100002: //RootNode
-    400000: BuildingA:BuildingA:polySurface1
-    400002: //RootNode
-    2300000: BuildingA:BuildingA:polySurface1
-    3300000: BuildingA:BuildingA:polySurface1
-    4300000: BuildingA:BuildingA:polySurface1
+    100000: //RootNode
+    100002: BuildingA:BuildingA:tower1
+    400000: //RootNode
+    400002: BuildingA:BuildingA:tower1
+    2300000: BuildingA:BuildingA:tower1
+    3300000: BuildingA:BuildingA:tower1
+    4300000: BuildingA:BuildingA:tower1
   materials:
     importMaterials: 1
     materialName: 0
