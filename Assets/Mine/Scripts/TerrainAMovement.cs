@@ -22,7 +22,7 @@ public class TerrainAMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
     {
-        m_speed = p_player.GetComponent<Player>().p_movement.y * 20;
+        m_speed = p_player.GetComponent<Player>().p_movement.y;
 
         //Move this terrain towards the player.
         this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z - m_speed * Time.deltaTime);
