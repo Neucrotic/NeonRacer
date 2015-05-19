@@ -18,7 +18,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 9968c3fb5f78383409eb6da8e42d2a78, type: 3}
+          m_Texture: {fileID: 2800000, guid: d3f704f2b455d1b4ab34dac85f8d0b34, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -46,7 +46,7 @@ Material:
         first:
           name: _EmissionMap
         second:
-          m_Texture: {fileID: 2800000, guid: 9968c3fb5f78383409eb6da8e42d2a78, type: 3}
+          m_Texture: {fileID: 2800000, guid: d3f704f2b455d1b4ab34dac85f8d0b34, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -93,7 +93,7 @@ Material:
       data:
         first:
           name: _Parallax
-        second: .0199999996
+        second: .00499999989
       data:
         first:
           name: _ZWrite
@@ -101,7 +101,7 @@ Material:
       data:
         first:
           name: _Glossiness
-        second: 1
+        second: .688000023
       data:
         first:
           name: _BumpScale
@@ -125,16 +125,16 @@ Material:
       data:
         first:
           name: _EmissionScaleUI
-        second: 1
+        second: 10
       data:
         first:
           name: _Metallic
-        second: 0
+        second: .43599999
     m_Colors:
       data:
         first:
           name: _EmissionColor
-        second: {r: 0, g: .503448486, b: 1, a: 1}
+        second: {r: 0, g: 10, b: 2.11764717, a: 10}
       data:
         first:
           name: _Color
@@ -142,4 +142,4 @@ Material:
       data:
         first:
           name: _EmissionColorUI
-        second: {r: 0, g: .503448486, b: 1, a: 1}
+        second: {r: 0, g: 1, b: .211764708, a: 1}
