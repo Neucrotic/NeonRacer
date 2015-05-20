@@ -98,6 +98,8 @@ GameObject:
   - 33: {fileID: 19644646}
   - 65: {fileID: 19644645}
   - 23: {fileID: 19644644}
+  - 114: {fileID: 19644648}
+  - 54: {fileID: 19644649}
   m_Layer: 0
   m_Name: building
   m_TagString: Building
@@ -155,11 +157,37 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 19644643}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 199.699997}
+  m_LocalPosition: {x: 0, y: 0, z: -70.3000031}
   m_LocalScale: {x: 5, y: 10, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!114 &19644648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 19644643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4efd67fa7ab9cc4f8e07a32d223a69a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &19644649
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 19644643}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &396209522
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,7 +202,7 @@ GameObject:
   - 114: {fileID: 396209523}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -190,10 +218,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4ebd57cebd3a743aea7510c1e060ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myTransform: {fileID: 0}
   p_speed: 5
   p_movement: {x: 0, y: 0}
-  score: 0
+  p_score: 0
 --- !u!23 &396209524
 MeshRenderer:
   m_ObjectHideFlags: 0
