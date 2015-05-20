@@ -13,7 +13,10 @@ public class Player : MonoBehaviour
 
     //Score Data
     public float p_score = 0;
-    int scoreMultiplier = 1;
+    int m_scoreMultiplier = 1;
+
+    //Near-Miss Data
+    public int p_missCounter = 0;
 
     void Start()
     {
@@ -55,7 +58,12 @@ public class Player : MonoBehaviour
         }
 		
         //increasing the score
+<<<<<<< HEAD
         p_score += 1 * scoreMultiplier;
 		p_movement = new Vector2((float)m_dirLR, p_speed);
+=======
+        p_score += 1 * m_scoreMultiplier;
+        p_movement = new Vector2((float)m_dirLR, p_speed);
+>>>>>>> 32a52655c8a91136adb33672eeb074bcded07c8f
 	}
 }
