@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Player : MonoBehaviour 
+public class Player : MonoBehaviour
 {
     //Speed Data
     float m_maxSpeed = 80;
@@ -20,11 +20,11 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
-	void Update ()
-	{
+    void Update()
+    {
         //ensuring speed stays within its range
         if (p_speed > m_maxSpeed)
         {
@@ -56,14 +56,17 @@ public class Player : MonoBehaviour
         {
             p_speed -= 0.354f;
         }
-		
+
         //increasing the score
-<<<<<<< HEAD
-        p_score += 1 * scoreMultiplier;
-		p_movement = new Vector2((float)m_dirLR, p_speed);
-=======
         p_score += 1 * m_scoreMultiplier;
         p_movement = new Vector2((float)m_dirLR, p_speed);
->>>>>>> 32a52655c8a91136adb33672eeb074bcded07c8f
-	}
+    }
+
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.name == "P_BuildingA 1")
+        {
+            print("BUMP");
+        }
+    }
 }

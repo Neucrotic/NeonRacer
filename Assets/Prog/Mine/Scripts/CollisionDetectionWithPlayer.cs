@@ -31,7 +31,6 @@ public class CollisionDetectionWithPlayer : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             print("DEAD!");
-            //Destroy(col.gameObject);
         }
     }
 }

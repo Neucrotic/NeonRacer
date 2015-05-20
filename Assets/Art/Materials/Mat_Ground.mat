@@ -44,6 +44,13 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _OcclusionMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _EmissionMap
         second:
           m_Texture: {fileID: 2800000, guid: 36f8e771d758c114b8b503def1defaa7, type: 3}
@@ -62,13 +69,6 @@ Material:
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 0, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _OcclusionMap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
@@ -120,12 +120,12 @@ Material:
         second: 0
       data:
         first:
-          name: _Mode
-        second: 0
-      data:
-        first:
           name: _EmissionScaleUI
         second: 10
+      data:
+        first:
+          name: _Mode
+        second: 0
       data:
         first:
           name: _Metallic
