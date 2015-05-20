@@ -87,6 +87,56 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &507042514
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 4ad909036032f3e4e81f2c0b226e981f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4ad909036032f3e4e81f2c0b226e981f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: .964999974
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4ad909036032f3e4e81f2c0b226e981f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4ad909036032f3e4e81f2c0b226e981f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 7.10650161e-09
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4ad909036032f3e4e81f2c0b226e981f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: .999048233
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4ad909036032f3e4e81f2c0b226e981f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: .0436193943
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4ad909036032f3e4e81f2c0b226e981f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -1.62765616e-07
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4ad909036032f3e4e81f2c0b226e981f, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4ad909036032f3e4e81f2c0b226e981f, type: 3}
+      propertyPath: m_Name
+      value: neonracer_txt
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 4ad909036032f3e4e81f2c0b226e981f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 96667c99d77cd5a48a9c5e9bb5f3bbb9, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4ad909036032f3e4e81f2c0b226e981f, type: 3}
+  m_IsPrefabParent: 0
 --- !u!1 &564885781
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,56 +323,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 143e090978292ab4c9cffc6afe783083, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &1253673568
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400000, guid: c5f77d900db4cc34787634f15617479a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: c5f77d900db4cc34787634f15617479a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: .964999974
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: c5f77d900db4cc34787634f15617479a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -7
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: c5f77d900db4cc34787634f15617479a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 7.10650161e-09
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: c5f77d900db4cc34787634f15617479a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: .999048233
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: c5f77d900db4cc34787634f15617479a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: .0436193943
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: c5f77d900db4cc34787634f15617479a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -1.62765616e-07
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: c5f77d900db4cc34787634f15617479a, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: c5f77d900db4cc34787634f15617479a, type: 3}
-      propertyPath: m_Name
-      value: neonracer_txt
-      objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: c5f77d900db4cc34787634f15617479a, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 96667c99d77cd5a48a9c5e9bb5f3bbb9, type: 2}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c5f77d900db4cc34787634f15617479a, type: 3}
-  m_IsPrefabParent: 0
 --- !u!1 &1400881785
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,7 +382,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!1 &2056409418
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,7 +424,7 @@ ReflectionProbe:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IntensityMultiplier: .25
+  m_IntensityMultiplier: 1
   m_HDR: 1
   m_BoxProjection: 0
   m_RenderDynamicObjects: 0
@@ -441,4 +441,4 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
