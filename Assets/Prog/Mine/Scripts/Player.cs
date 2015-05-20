@@ -8,15 +8,19 @@ public class Player : MonoBehaviour
     float m_minSpeed = 20;
     public float p_speed = 5;
     public Vector2 p_movement;
+    public bool p_boost;
     int m_dirLR = 0;
 
     //Score Data
     public float p_score = 0;
-    int scoreMultiplier = 1;
+    int m_scoreMultiplier = 1;
+
+    //Near-Miss Data
+    public int p_missCounter = 0;
 
     void Start()
     {
-        p_movement = new Vector2((float)m_dirLR, p_speed);
+        
     }
 
 	void Update ()
@@ -40,6 +44,8 @@ public class Player : MonoBehaviour
         {
             m_dirLR = 1;
         }
+        if (!Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A))
+            m_dirLR = 0;
 
         //detecting input for adjusting the speed value
         if (Input.GetKey(KeyCode.W))
@@ -52,6 +58,12 @@ public class Player : MonoBehaviour
         }
 		
         //increasing the score
+<<<<<<< HEAD
         p_score += 1 * scoreMultiplier;
+		p_movement = new Vector2((float)m_dirLR, p_speed);
+=======
+        p_score += 1 * m_scoreMultiplier;
+        p_movement = new Vector2((float)m_dirLR, p_speed);
+>>>>>>> 32a52655c8a91136adb33672eeb074bcded07c8f
 	}
 }
